@@ -1,0 +1,6 @@
+
+script.google
+https://script.google.com/macros/s/AKfycbyeAqWX_7eWD2Am-mwuB-p4R8rtjPu3rkxSQXjSGc-UwMyj0ckEr6lT-bXFtiNI03mAAw/exec
+
+docs.google.com
+https://docs.google.com/spreadsheets/d/1cpIE1ZqT6cTG9Z-_amLB_puHIfJu79blcF4dy4U1GyI/edit?gid=0#gid=0
