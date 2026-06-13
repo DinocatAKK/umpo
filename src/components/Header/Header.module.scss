@@ -1,0 +1,278 @@
+.header {
+    width: 1240px;
+    height: 115px;
+    display: flex;
+    margin: 0px 100px 0px 100px;
+    position: fixed;
+    top: 0;
+    left: 43.55%;
+    transform: translateX(-50%);
+    background: white;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out, padding 0.3s ease, background 0.3s ease;
+    
+    img {
+        width: 150px;
+        height: 100px;
+        cursor: pointer;
+        transition: transform 0.2s;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    
+    nav {
+        width: 450px;
+        height: 30px;
+        margin: 35px 0 0 640px;
+        display: flex;
+        justify-content: space-between;
+        
+        a {
+            color: #3e3e3e;
+            text-decoration: none;
+            font-size: 24px;
+            font-family: Roboto;
+            cursor: pointer;
+            transition: color 0.2s;
+            position: relative;
+            
+            &:hover {
+                color: #9A0A32;
+            }
+            
+            &:active {
+                color: #9A0A32;
+            }
+        }
+    }
+    
+    // Класс для скрытия header при скролле вниз
+    &.hidden {
+        transform: translateX(-50%) translateY(-100%);
+    }
+    
+    // Класс для изменения стилей при скролле
+    &.scrolled {
+        padding: 10px 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        
+        img {
+            width: 130px;
+            height: 80px;
+        }
+        
+        nav {
+            margin: 25px 0 0 640px;
+            
+            a {
+                font-size: 22px;
+            }
+        }
+    }
+    
+    // Бургер-кнопка (скрыта на ПК и планшете)
+    .burgerBtn {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+        
+        span {
+            width: 100%;
+            height: 3px;
+            background: #3e3e3e;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+    }
+    
+    // Оверлей для бургер-меню
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+    
+    // Мобильное меню
+    .mobileNav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        background: white;
+        flex-direction: column;
+        padding: 100px 30px 30px;
+        z-index: 1000;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        
+        a {
+            color: #3e3e3e;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: Roboto;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: color 0.2s;
+            
+            &:hover {
+                color: #9A0A32;
+            }
+        }
+    }
+    
+    // Активное состояние бургер-меню
+    &.menuOpen {
+        .burgerBtn {
+            span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+        
+        .mobileNav {
+            right: 0;
+        }
+        
+        .overlay {
+            display: block;
+        }
+    }
+}
+
+hr {
+    width: 1240px;
+    border: 2px solid #3e3e3e;
+    margin: 115px 100px 0 100px;
+    transition: opacity 0.3s ease;
+    
+    &.hrHidden {
+        opacity: 0;
+    }
+}
+
+// ========== ПЛАНШЕТ (768px) ==========
+@media (max-width: 1024px) {
+    .header {
+        width: 90%;
+        left: 50%;
+        margin: 0 auto;
+        
+        img {
+            width: 120px;
+            height: 80px;
+        }
+        
+        nav {
+            width: 350px;
+            margin: 25px 0 0 auto;
+            
+            a {
+                font-size: 18px;
+            }
+        }
+        
+        &.scrolled {
+            img {
+                width: 100px;
+                height: 60px;
+            }
+            
+            nav {
+                margin: 20px 0 0 auto;
+                
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    
+    hr {
+        width: 90%;
+        margin: 90px auto 0 auto;
+    }
+}
+
+// ========== ТЕЛЕФОН (320px) ==========
+@media (max-width: 748px) {
+    .header {
+        width: 90%;
+        height: 70px;
+        left: 50%;
+        margin: 0 auto;
+        padding: 0 15px;
+        justify-content: space-between;
+        align-items: center;
+        
+        img {
+            width: 80px;
+            height: 50px;
+        }
+        
+        // Скрываем обычную навигацию
+        nav {
+            display: none;
+        }
+        
+        // Показываем бургер-кнопку
+        .burgerBtn {
+            display: flex;
+        }
+        
+        // Показываем мобильное меню
+        .mobileNav {
+            display: flex;
+        }
+        
+        // Показываем оверлей
+        .overlay {
+            display: none;
+        }
+        
+        &.menuOpen {
+            .overlay {
+                display: block;
+            }
+        }
+        
+        // Стили при скролле
+        &.scrolled {
+            height: 60px;
+            padding: 0 15px;
+            
+            img {
+                width: 65px;
+                height: 40px;
+            }
+        }
+    }
+    
+    hr {
+        width: 90%;
+        margin: 70px auto 0 auto;
+        border-width: 1px;
+    }
+}

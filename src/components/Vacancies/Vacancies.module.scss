@@ -1,0 +1,213 @@
+.vacancies {
+    width: 1240px;
+    height: 1190px;
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 100px 0 100px;
+    font-size: 24px;
+    
+    > img {
+        width: 415px;
+        height: 1190px;
+    }
+    
+    .info {
+        width: 775px;
+        height: 1170px;
+        
+        img {
+            width: 15px;
+            height: 15px;
+            margin: 10px 15px 0 0;
+        }
+        
+        .text {
+            width: 775px;
+            height: 525px;
+            
+            h1 {
+                font-size: 48px;
+                color: #9A0A32;
+            }
+            
+            hr {
+                width: 775px;
+                border: 2px solid #3e3e3e;
+                margin: 25px 0 25px 0;
+            }
+            
+            p {
+                text-align: justify;
+                line-height: 36px;
+                margin-bottom: 15px;
+                
+                span {
+                    color: #9A0A32;
+                }
+            }
+        }
+        
+        .terms {
+            width: 645px;
+            height: 595px;
+            margin-top: 50px;
+            
+            h4 {
+                margin-bottom: 25px;
+                font-size: 32px;
+            }
+            
+            .condition {
+                width: 645px;
+                display: flex;
+                margin-bottom: 15px;
+                
+                p {
+                    line-height: 36px;
+                    
+                    span {
+                        color: #9A0A32;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ========== ПЛАНШЕТ (768px) ==========
+@media (max-width: 1024px) {
+    .vacancies {
+        width: 90%;
+        height: auto;
+        margin: 60px auto 0 auto;
+        gap: 30px;
+
+        
+        > img {
+            width: 42%;
+            height: auto;
+            margin-bottom: 380px;
+        
+        }
+        
+        .info {
+            width: 60%;
+            height: auto;
+            
+            .text {
+                width: 100%;
+                height: auto;
+                
+                h1 {
+                    font-size: 36px;
+                }
+                
+                hr {
+                    width: 100%;
+                    margin: 20px 0;
+                }
+                
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 12px;
+                }
+            }
+            
+            .terms {
+                width: 100%;
+                height: auto;
+                margin-top: 30px;
+                
+                h4 {
+                    font-size: 26px;
+                    margin-bottom: 20px;
+                }
+                
+                .condition {
+                    width: 100%;
+                    margin-bottom: 12px;
+                    
+                    p {
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
+                    
+                    img {
+                        width: 12px;
+                        height: 12px;
+                        margin: 8px 12px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ========== ТЕЛЕФОН (320px) ==========
+@media (max-width: 748px) {
+    .vacancies {
+        width: 90%;
+        flex-direction: column;
+        margin: 40px auto 0 auto;
+        gap: 20px;
+        
+        > img {
+            display: none; // Убираем большую картинку справа
+        }
+        
+        .info {
+            width: 100%;
+            
+            .text {
+                width: 100%;
+                
+                h1 {
+                    font-size: 28px;
+                    text-align: center;
+                }
+                
+                hr {
+                    width: 100%;
+                    margin: 15px 0;
+                    border-width: 1px;
+                }
+                
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+            
+            .terms {
+                width: 100%;
+                margin-top: 20px;
+                
+                h4 {
+                    font-size: 22px;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                
+                .condition {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    align-items: flex-start;
+                    
+                    p {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    
+                    img {
+                        width: 12px;
+                        height: 12px;
+                        margin: 4px 10px 0 0;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+    }
+}

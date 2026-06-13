@@ -1,0 +1,208 @@
+.footer {
+    width: 1240px;
+    height: 280px;
+    margin: 80px 100px 80px 100px;
+    
+    h1 {
+        font-size: 36px;
+        color: #9A0A32;
+    }
+    
+    .contacts {
+        width: 1240px;
+        height: 145px;
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0 25px 0;
+        font-size: 20px;
+        
+        p:nth-of-type(2) {
+            color: #9A0A32;
+            margin-top: 20px;
+        }
+        
+        p:nth-of-type(3) {
+            color: #9A0A32;
+            margin-top: 15px;
+        }
+        
+        p:nth-of-type(4) {
+            color: #9A0A32;
+            margin-top: 15px;
+        }
+        
+        .navigation {
+            .icons {
+                width: 350px;
+                height: 50px;
+                display: grid;
+                grid-template-columns: 50px 50px 50px 50px;
+                grid-template-rows: 50px;
+                column-gap: 50px;
+                
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            
+            nav {
+                width: 350px;
+                height: 30px;
+                margin: 35px 2px 0 0px;
+                display: flex;
+                justify-content: space-between;
+                
+                a {
+                    color: #3e3e3e;
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-family: Roboto;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        color: #9A0A32;
+                    }
+                    
+                    &:active {
+                        color: #9A0A32;
+                    }
+                }
+            }
+        }
+    }
+    
+    hr {
+        width: 1240px;
+        border: 2px solid #3e3e3e;
+        margin: 25px 0 25px 0;
+    }
+    
+    .deep {
+        font-size: 16px;
+    }
+}
+
+// ========== ПЛАНШЕТ (768px) ==========
+@media (max-width: 1024px) {
+    .footer {
+        width: 90%;
+        height: auto;
+        margin: 60px auto 60px auto;
+        
+        h1 {
+            font-size: 28px;
+        }
+        
+        .contacts {
+            width: 100%;
+            height: auto;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0 20px 0;
+            font-size: 16px;
+            
+            .frame {
+                flex: 1;
+                min-width: 180px;
+            }
+            
+            .navigation {
+                width: 100%;
+                
+                .icons {
+                    width: 100%;
+                    max-width: 350px;
+                    margin: 0 auto;
+                }
+                
+                nav {
+                    width: 100%;
+                    max-width: 350px;
+                    margin: 35px auto 0 auto;
+                    
+                    a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        
+        hr {
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        .deep {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
+
+// ========== ТЕЛЕФОН (320px) ==========
+@media (max-width: 748px) {
+    .footer {
+        width: 90%;
+        margin: 40px auto 40px auto;
+        
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .contacts {
+            flex-direction: column;
+            gap: 30px;
+            margin: 15px 0;
+            
+            .frame {
+                text-align: center;
+                
+                p {
+                    margin: 5px 0;
+                }
+            }
+            
+            p:nth-of-type(2),
+            p:nth-of-type(3),
+            p:nth-of-type(4) {
+                margin-top: 10px;
+            }
+            
+            .navigation {
+                // Скрываем навигацию
+                nav {
+                    display: none;
+                }
+                
+                .icons {
+                    width: 100%;
+                    height: auto;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr; // Две колонки
+                    grid-template-rows: auto auto; // Две строки
+                    gap: 20px;
+                    justify-items: center;
+                    align-items: center;
+                    
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+        
+        hr {
+            margin: 15px 0;
+            border-width: 1px;
+        }
+        
+        .deep {
+            font-size: 10px;
+            text-align: center;
+            line-height: 1.4;
+        }
+    }
+}

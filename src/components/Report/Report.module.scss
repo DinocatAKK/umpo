@@ -1,0 +1,125 @@
+.report {
+    width: 1240px;
+    height: 1685px;
+    margin: 80px 100px 80px 100px;
+    
+    h1 {
+        font-size: 48px;
+        color: #9A0A32;
+    }
+    
+    .news {
+        width: 1240px;
+        height: 500px;
+        margin: 50px 0 50px 0;
+        display: flex;
+        justify-content: space-between;
+        
+        img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .text {
+            width: 690px;
+            height: 500px;
+            
+            p {
+                font-size: 24px;
+                line-height: 36px;
+            }
+            
+            h4 {
+                font-size: 32px;
+                color: #9A0A32;
+                margin: 15px 0 15px 0;
+            }
+        }
+    }
+}
+
+// ========== ПЛАНШЕТ (768px) ==========
+@media (max-width: 1024px) {
+    .report {
+        width: 90%;
+        height: auto;
+        margin: 60px auto;
+        
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .news {
+            width: 100%;
+            height: auto;
+            margin: 30px 0;
+            gap: 20px;
+            flex-direction: column;
+            
+            img {
+                width: 100%;
+                height: auto;
+                max-height: 350px;
+            }
+            
+            .text {
+                width: 100%;
+                height: auto;
+                
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+                
+                h4 {
+                    font-size: 24px;
+                    margin: 12px 0;
+                }
+            }
+        }
+    }
+}
+
+// ========== ТЕЛЕФОН (320px) ==========
+@media (max-width: 748px) {
+    .report {
+        width: 90%;
+        margin: 40px auto;
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .news {
+            margin: 20px 0;
+            gap: 12px;
+            
+            img {
+                display: none; // Скрываем картинки на телефоне
+            }
+            
+            .text {
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                
+                p:first-child {
+                    color: #9A0A32;
+                    font-weight: 500;
+                }
+                
+                h4 {
+                    font-size: 18px;
+                    margin: 10px 0;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

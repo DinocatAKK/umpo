@@ -1,0 +1,103 @@
+.aboutUs {
+    width: 1240px;
+    height: 540px;
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 100px 0px 100px;
+    
+    .text {
+        width: 580px;
+        height: 540px;
+        
+        h1 {
+            font-size: 48px;
+            color: #9A0A32;
+        }
+        
+        hr {
+            width: 580px;
+            border: 2px solid #3e3e3e;
+            margin: 25px 0 25px 0;
+        }
+        
+        p {
+            font-size: 24px;
+            line-height: 36px;
+            text-align: justify;
+        }
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// ========== ПЛАНШЕТ (768px) ==========
+@media (max-width: 1024px) {
+    .aboutUs {
+        width: 90%;
+        height: auto;
+        margin: 60px auto 0 auto;
+        gap: 30px;
+        
+        .text {
+            width: 55%;
+            height: auto;
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            hr {
+                width: 100%;
+                margin: 20px 0;
+            }
+            
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+        
+        img {
+            width: 40%;
+            height: auto;
+        }
+    }
+}
+
+// ========== ТЕЛЕФОН (320px) ==========
+@media (max-width: 748px) {
+    .aboutUs {
+        width: 90%;
+        margin: 40px auto 0 auto;
+        gap: 20px;
+        
+        .text {
+            width: 100%;
+            
+            h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+            
+            hr {
+                width: 100%;
+                margin: 15px 0;
+                border-width: 1px;
+            }
+            
+            p {
+                font-size: 14px;
+                line-height: 20px;
+                text-align: justify;
+            }
+        }
+        
+        img {
+            width: 50%;
+            margin-top: 10px;
+        }
+    }
+}

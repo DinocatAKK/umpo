@@ -1,0 +1,157 @@
+.vacancy {
+    width: 400px;
+    height: 570px;
+    border: 3px solid #3e3e3e;
+    padding: 25px;
+    font-size: 24px;
+    
+    h6 {
+        color: #9A0A32;
+        font-size: 24px;
+    }
+    
+    .info {
+        width: 350px;
+        height: 195px;
+        margin: 15px 0 25px 0;
+        line-height: 28px;
+    }
+    
+    .worker {
+        width: 350px;
+        height: 120px;
+        border: 3px solid #9A0A32;
+        padding: 26px 74px 26px 74px;
+        
+        p {
+            color: #9A0A32;
+            margin: 0;
+            text-align: center;
+            width: 201px;
+        }
+        
+        p:nth-last-of-type(1) {
+            margin-top: 10px;
+            color: #3e3e3e;
+        }
+    }
+    
+    .student {
+        width: 350px;
+        height: 120px;
+        border: 3px solid #3e3e3e;
+        padding: 26px 60px 26px 60px;
+        margin-top: 15px;
+        
+        p {
+            color: #9A0A32;
+            margin: 0;
+            text-align: center;
+            width: 235px;
+        }
+        
+        p:nth-last-of-type(1) {
+            margin-top: 10px;
+            color: #3e3e3e;
+        }
+    }
+}
+
+// ========== ПЛАНШЕТ (768px) ==========
+@media (max-width: 1024px) {
+    .vacancy {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        
+        h6 {
+            font-size: 20px;
+        }
+        
+        .info {
+            width: 100%;
+            height: auto;
+            min-height: 150px;
+            margin: 12px 0 20px 0;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        
+        .worker {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            
+            p {
+                width: 100%;
+                font-size: 16px;
+            }
+            
+            p:nth-last-of-type(1) {
+                margin-top: 8px;
+                font-size: 14px;
+            }
+        }
+        
+        .student {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            margin-top: 12px;
+            
+            p {
+                width: 100%;
+                font-size: 16px;
+            }
+            
+            p:nth-last-of-type(1) {
+                margin-top: 8px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// ========== ТЕЛЕФОН (320px) ==========
+@media (max-width: 748px) {
+    .vacancy {
+        padding: 15px;
+        
+        h6 {
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        .info {
+            min-height: 120px;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 10px 0 15px 0;
+        }
+        
+        .worker {
+            padding: 15px;
+            
+            p {
+                font-size: 14px;
+            }
+            
+            p:nth-last-of-type(1) {
+                font-size: 12px;
+            }
+        }
+        
+        .student {
+            padding: 15px;
+            margin-top: 10px;
+            
+            p {
+                font-size: 14px;
+            }
+            
+            p:nth-last-of-type(1) {
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,138 @@
+.products {
+    width: 1240px;
+    height: 910px;
+    margin: 80px 100px 80px 100px;
+    display: flex;
+    justify-content: space-between;
+    
+    .design {
+        width: 565px;
+        height: 905px;
+        
+        h1 {
+            font-size: 48px;
+            color: #9A0A32;
+        }
+        
+        img {
+            margin-top: 30px;
+            width: 565px;
+            height: 810px;
+        }
+    }
+    
+    .text {
+        width: 625px;
+        height: 800px;
+        margin-top: 90px;
+        
+        h4 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            font-size: 24px;
+            line-height: 32px;
+            text-align: justify;
+            
+            span {
+                color: #9A0A32;
+            }
+        }
+        
+        p:nth-of-type(1) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+// ========== ПЛАНШЕТ (768px) ==========
+@media (max-width: 1024px) {
+    .products {
+        width: 90%;
+        height: auto;
+        margin: 60px auto;
+        gap: 30px;
+        flex-wrap: wrap;
+        
+        .design {
+            width: 45%;
+            height: auto;
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            img {
+                width: 100%;
+                height: auto;
+                margin-top: 20px;
+            }
+        }
+        
+        .text {
+            width: 50%;
+            height: auto;
+            margin-top: 50px;
+            
+            h4 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+            
+            p {
+                font-size: 18px;
+                line-height: 26px;
+            }
+            
+            p:nth-of-type(1) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+// ========== ТЕЛЕФОН (320px) ==========
+@media (max-width: 748px) {
+    .products {
+        width: 90%;
+        flex-direction: column;
+        margin: 40px auto;
+        gap: 20px;
+        
+        .design {
+            width: 100%;
+            
+            h1 {
+                font-size: 28px;
+                text-align: center;
+            }
+            
+            img {
+                display: none; // Скрываем картинку
+            }
+        }
+        
+        .text {
+            width: 100%;
+            margin-top: 0;
+            
+            h4 {
+                font-size: 22px;
+                margin-bottom: 15px;
+                text-align: center;
+                display: none;
+            }
+            
+            p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            
+            p:nth-of-type(1) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
